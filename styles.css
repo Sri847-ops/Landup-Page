@@ -1,0 +1,364 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+header {
+    background: linear-gradient(to right, #4CAF50, #388E3C);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    background: url('header-bg.svg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 4em;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    z-index: 2;
+    position: relative;
+}
+
+header .btn-primary {
+    background: #ff5722;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s ease-in-out;
+    z-index: 2;
+    position: relative;
+}
+
+header .btn-primary:hover {
+    background: #e64a19;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+#features h2,
+#testimonials h2,
+#cta h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+#features h2::after,
+#testimonials h2::after,
+#cta h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #ff5722;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.feature p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.8;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.testimonial {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonial p:first-of-type {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonial p:last-of-type {
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+#cta {
+    background: linear-gradient(to right, #ff5722, #e64a19);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#cta::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#cta h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+#cta p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    z-index: 2;
+    position: relative;
+}
+
+#cta .btn-primary {
+    background: #fff;
+    color: #ff5722;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    z-index: 2;
+    position: relative;
+}
+
+#cta .btn-primary:hover {
+    background: #fbe9e7;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    header .btn-primary {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    #cta h2 {
+        font-size: 2.5em;
+    }
+
+    #cta p {
+        font-size: 1.2em;
+    }
+
+    #cta .btn-primary {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    header .btn-primary {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    #cta h2 {
+        font-size: 2em;
+    }
+
+    #cta p {
+        font-size: 1.1em;
+    }
+
+    #cta .btn-primary {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+}
+/* Add fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Hover Effect */
+.btn-primary {
+    transition: transform 0.3s ease-in-out;
+}
+/* Arrow head styles */
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.arrow:hover {
+    background-color: #e64a19;
+    transform: scale(1.1);
+}
+
+.arrow::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.prev::before {
+    border-width: 15px 20px 15px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+.next::before {
+    border-width: 15px 0 15px 20px;
+    border-color: transparent transparent transparent #fff;
+}
+header {
+    background: url('cvr.jpg') no-repeat center center;
+    background-size: cover;
+    color: #000000;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
